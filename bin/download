@@ -16,4 +16,6 @@ download_release "$ASDF_INSTALL_VERSION" "$release_file"
 
 tar -xzf "$release_file" -C "$ASDF_DOWNLOAD_PATH" || fail "Could not extract $release_file"
 chmod +x "${ASDF_DOWNLOAD_PATH}/volta"
+chmod +x "${ASDF_DOWNLOAD_PATH}/volta-shim"
+chmod +x "${ASDF_DOWNLOAD_PATH}/volta-migrate"
 rm "$release_file"
